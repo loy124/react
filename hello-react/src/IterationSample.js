@@ -23,6 +23,7 @@ export default class IterationSample extends Component {
     const { names } = this.state;
     //const names = this.state.names;
     //filter을 사용해서 구현
+    //index번째를 제외한 원소만 있는 새 배열 생성 
     this.setState({
         names: names.filter((item, i) => i !== index)
     })
