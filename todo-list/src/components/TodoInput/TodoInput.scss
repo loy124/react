@@ -24,5 +24,20 @@
         height: 2rem;
         margin-left: 1rem;
         border: 1px solid $oc-green-7;
+        color: $oc-green-7;
+        font-weight: 500;
+        font-size:1.1rem;
+        display: flex;
+        //내용 가운데 정렬
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            background: $oc-green-7;
+            color:white;
+        }
+        &:active {
+            background: $oc-green-8;
+        }
     }
 }
