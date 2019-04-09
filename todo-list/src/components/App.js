@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PageTemplate from './PageTemplate';
 import TodoInput from './TodoInput';
 import TodoList from './TodoList';
+
+// const initialTodos = new Array(500).fill(0).map(
+//   (foo, index) => ({id: index, text: `일정 ${index}`, done:false})
+// );
 export default class App extends Component {
   state = {
     input: '', //input값
