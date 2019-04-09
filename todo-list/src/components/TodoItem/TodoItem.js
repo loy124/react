@@ -5,6 +5,7 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 export default class TodoItem extends Component {
+  
   //컴포넌트 최적화하기
   //컴포넌트 배열이 렌덜이되는 리스트 컴포넌트일떄
   // 리스트 컴포넌트 내부에 있는 아이템 컴포넌트일때
@@ -25,7 +26,7 @@ shouldComponentUpdate(nextProps, nextState) {
         <div className={cx("text", { done })}>{children}</div>
         <div className={cx("delete")} onClick={(e) => {
           onRemove();
-          e.stopPropagation();
+          e.stopPropagation(); 
         }}>[지우기]</div>
       </div>
     );
