@@ -3,7 +3,6 @@ import styles from "./TodoInput.scss";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
-
 //input과 버튼이 함께 있는 컴포넌트 입니다
 // value: input값
 // onChange: input 변경 이벤트
