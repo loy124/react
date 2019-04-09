@@ -41,19 +41,58 @@ export default class App extends Component {
       input: ''
     })
   }
+  // to do Item 토글하기
+  handleToggle = id => {
+    //id로 배열의 인덱스를 찾습니다.
+    const { todos } = this.state;
+    const index = todos.findIndex(todo => todo.id === id);
+
+    //찾은 데이터의 done값을 반전시킵니다.
+    const toggled = {
+      ...todos[index],
+      done: !todos[index].done
+    };
+
+    //slice를 사용하여 우리가 찾은 index 전후의 데이터들을 복사합니다.
+    // 그리고 그사이에 변경된 to do 객체를 넣는다
+    this.setState({
+      todos: [
+        ...todos.slice(0, index),
+        toggled,
+        ...todos.slice(index + 1, todos.length)
+      ]
+    });
+  }
+
+  handleRemove = id => {
+    // 선택한 id로 배열의 인덱스를 제거합니다
+    const { todos } = this.state;
+    const index = todos.findIndex(todo=> todo.id === id);
+
+    //slice를 사용해서 전후 데이터를 복사하고 찾은 인덱스를 제외시킨다
+    this.setState({
+      todos: [
+        ...todos.slice(0, index),
+        ...todos.slice(index + 1, todos.length)
+      ]
+    });
+  }
+
 
   render() {
     const { input, todos } = this.state; // this.state.input
     const { 
       handleChange,
-      handleInsert 
-          } = this;
+      handleInsert,
+      handleToggle,
+      handleRemove
+      } = this;
     
     return (
       
         <PageTemplate>
           <TodoInput onChange={handleChange} onInsert={handleInsert} value={input}/>
-          <TodoList todos={todos}/>
+          <TodoList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
         </PageTemplate>
       
     );

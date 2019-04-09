@@ -15,7 +15,10 @@ export default class TodoItem extends Component {
         <input className={cx("tick")} type="checkbox" checked={done} readOnly />
         {/* done값이 참이면 done클래스를 적용해 추후 text클래스와 done 클래스가 함께있으면 중간선을 긋도록 작성  */}
         <div className={cx("text", { done })}>{children}</div>
-        <div className={cx("delete")} onClick={onRemove}>[지우기]</div>
+        <div className={cx("delete")} onClick={(e) => {
+          onRemove();
+          e.stopPropagation();
+        }}>[지우기]</div>
       </div>
     );
   }
