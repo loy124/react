@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+.App {
+    text-align: center;
+  
+  }
+  .back{
+    background: #2c2c2c;
+  }
+  .Rectangle {
+    margin: 0 auto;
+    width: 375px;
+    height: 667px;
+    background-color: #ffffff;
+  }
+  .Bitmap1 {
+    width: 94px;
+    height: 27px;
+    object-fit: contain;
+    margin: 30px 143px 610px 138px
+  }
+  .fixed {
+      display: flex;
+    position: fixed;
+    background-color: white;
+    width: 375px;
+    height: 50px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -1px 0 0 #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+ button{
+     margin-top: 15px;
+     margin-bottom:15px;
+     width: calc(100% - 375px);
+     width:20px;                         
+     height:20px;
+ }
+ .home{
+     margin-left:28px;
+ }
+ .home, .search, .photo, .like{
+     margin-right: 55px;
+ }
+ .profile{
+     margin-right:27px;
+ }
+ button > img{
+     width:20px;
+     height:20px;
+ }

@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+.App {
+    text-align: center;
+  }
+  .back{
+    background: #2c2c2c;
+  }
+  .Rectangle {
+    margin: 0 auto;
+    width: 375px;
+    height: 667px;
+    background-color: #ffffff;
+  }
+  .Bitmap {
+    width: 94px;
+    height: 27px;
+    object-fit: contain;
+    margin: 30px 143px 610px 138px
+  
+  }
+  .Rect{
+    width: 247px;
+    height: 40px;
+    border-radius: 20px;
+    border: solid 1px #2c2c2c;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+  }
+  .Rectangle-2 {
+    border: solid 1px #4a90e2;
+    color:#4a90e2;
+  }
+ 
+  .margin {
+    margin: 0 64px 172px 64px;
+  }
+  

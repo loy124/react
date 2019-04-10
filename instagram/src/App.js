@@ -1,22 +1,24 @@
 import React, { Component } from "react";
-import bitmap from "./img/bitmap.png";
-import "./App.scss";
+import { Route } from 'react-router-dom';
+import './App.scss';
+
+// get pages
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import MainScreen from './pages/mainScreen/MainScreen';
+
 
 class App extends Component {
 
-
   render() {
     return (
-      <div className="back">
-      <div className="Rectangle">
-        <header className="App-header">
-          <img src={bitmap} className="Bitmap" alt="logo" />
-          <div className="margin">
-            <button className="Rectangle-2">Login</button>
-            <button className="Rectangle-3">Register</button>
-          </div>
-        </header>
-      </div>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/mainScreen" component={MainScreen} />
+
       </div>
     );
   }
