@@ -1,122 +1,167 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 .body {
-    text-align: center;
-    background: #2c2c2c;
-  
-  }
-  .Rectangle {
-    margin: 0 auto;
-    width: 375px;
-    height: 667px;
-    background-color: #ffffff;
-    display:flex;
-  }
-  .Bitmap1 {
-    width: 94px;
-    height: 27px;
-    object-fit: contain;
-    margin: 30px 143px 610px 138px
-  }
-  .story {
-    width: 361px;
-    height: 457px;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.03);
-    background-color: #ffffff;
-    position: absolute;
-    top:70px;  
-  }
-  .top{
-      display: flex;
-     
-  }
-  .Avatar {
-    width: 38px;
-    height: 38px;
-    margin-left:23px;
-    margin-top: 8px;
-  }
-  .sarahannloreth {
-    width: 88px;
-    height: 18px;
-    font-family: AppleSDGothicNeo;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.29;
-    letter-spacing: normal;
-    text-align: left;
-    color: #2c2c2c;
-  }
-  .Kauai-Hawaii {
-    height: 18px;
-    font-family: AppleSDGothicNeo;
-    font-size: 13px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.38;
-    letter-spacing: normal;
-    text-align: left;
-    color: #aaaaaa;
-  }
-  .img{
-    position: absolute;
-    top: 124px;
-  }
-  article > img{
-    margin: 0 7px;
-    width: 361px;
-    height: 240px;
-  }
-  .like, .comments {
-    width: 16px;
-    height: 14px;
-    object-fit: contain;
-    margin-top:12px;
-    margin-bottom:11px;
-  }
-  .like{
-    margin-left:23px;
-    margin-right:16px;
-  }
-  .fixed {
-  
-    width: 375px;
-    height: 50px;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 -1px 0 0 #e0e0e0;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: fixed;
-    left: auto;
-    right: auto;
-    bottom: 55px;
-	padding: 0;
-
+  text-align: center;
+  background: #2c2c2c;
 }
+.Rectangle {
+  margin: 0 auto;
+  height: 1160px;
+  width: 375px;
+  background-color: #ffffff;
+  display: flex;
+}
+.Bitmap1 {
+  width: 94px;
+  height: 27px;
+  object-fit: contain;
+  margin: 30px 143px 610px 138px;
+}
+.story {
+  width: 361px;
+  height: 457px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+  position: absolute;
+  top: 70px;
+  margin-bottom:16px;
+}
+.story1 {
+  width: 361px;
+  height: 457px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+  position: absolute;
+  top: 543px;
   
- button{
-     background-color:transparent;
-     padding:0;
-     margin-top: 15px;
-     margin-bottom:15px;
-     border:0;
- }
- .home{
-     margin-left:28px;
- }
- .home, .search, .photo, .activity{
-     margin-right: 55px;
- }
- .profile{
-     margin-right:27px;
- }
-button > img{
-     width:20px;
-     height:20px;
-     
- }
+}
+.story2 {
+  width: 361px;
+  height: 457px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.03);
+  background-color: #ffffff;
+  position: absolute;
+  top: 1016px;
+  
+}
+
+.top {
+  display: flex;
+}
+.Avatar {
+  width: 38px;
+  height: 38px;
+  margin-left: 23px;
+  margin-top: 8px;
+}
+.sarahannloreth {
+  width: 88px;
+  height: 18px;
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2c2c2c;
+}
+.Kauai-Hawaii {
+  height: 18px;
+  font-family: AppleSDGothicNeo;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaaaaa;
+}
+
+article > img {
+  margin: 0 7px;
+  width: 361px;
+  height: 240px;
+}
+.like,
+.comments {
+  width: 16px;
+  height: 14px;
+  object-fit: contain;
+  margin-top: 12px;
+  margin-bottom: 11px;
+}
+.like {
+  margin-left: 23px;
+  margin-right: 16px;
+}
+.text-form {
+  margin-left: 23px;
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: left;
+}
+.content-name {
+  width: 329px;
+  height: 22px;
+  color: #2c2c2c;
+}
+.content {
+  color: #aaaaaa;
+  margin-bottom: 4px;
+}
+.content-tag{
+  color: #6e8f9c;
+  margin-bottom:4px;
+}
+.content-comments{
+  color:#aaaaaa;
+}
+
+.fixed {
+  width: 375px;
+  height: 50px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -1px 0 0 #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  left: center;
+  bottom: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+}
+.home {
+  margin-left: 28px;
+}
+.home,
+.search,
+.photo,
+.activity {
+  margin-right: 55px;
+}
+.profile {
+  margin-right: 27px;
+}
+button > img {
+  width: 20px;
+  height: 20px;
+}
