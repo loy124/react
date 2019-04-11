@@ -14,7 +14,7 @@ export default class Register extends Component {
                 <input className="Rect Rectangle-3 nickname" placeholder="nickname"/>
                 <input className="Rect Rectangle-3 email" placeholder="email"/>
                 <input className="Rect Rectangle-3 password" placeholder="password"/>
-                <button className="Rect Rectangle-4 register" onClick={() => history.push('/login')}>Register</button>
+                <button className="Rect Rectangle-5 register" onClick={() => history.push('/login')}>Register</button>
             </div>
             </header>
         </div>
