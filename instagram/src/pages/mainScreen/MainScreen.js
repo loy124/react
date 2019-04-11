@@ -150,10 +150,10 @@ export default class MainScreen extends Component {
           
 
           <footer className="fixed">
-            <button className="home">
+            <button className="home" onClick={() => history.push("/MainScreen")}>
               <img src={home} alt="" />
             </button>
-            <button className="search">
+            <button className="search" onClick={() => history.push("/Search")} >
               <img src={search} alt="" />
             </button>
             <button className="photo">
