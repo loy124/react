@@ -18,24 +18,27 @@ export default class Reply extends Component {
         <div className="Rectangle">
         
         <section className="search-back">
-        <div className="tags">
+        <div className="reply-tags">
         <div class="line">
-        <img className="tag-img"src={invalid} alt="" />
+        <div className='Oval'></div>
+        </div>
+        {/* <img className="tag-img"src={invalid} alt="" /> */}
+        
+        
+        <div>
+        <div className="reply-text">justin</div>
+        <div className="reply-post">Our curated library of royalty-free music gives you the polished feel of the big production houses. All our tracks are exclusive and copyright clear</div> 
+        
+        </div>
+        </div>
+        <div className="replys">
+        <div class="line">
+        <img className="reply-img"src={invalid} alt="" />
         </div>
         <div>
-        <div className="tag-text">lamnorghini</div>
-        <div className="tag-post">380,384 posts</div>
-        <div className="tag-box"></div>
-        </div>
-        </div>
-        <div className="tags">
-        <div class="line">
-        <img className="tag-img"src={invalid} alt="" />
-        </div>
-        <div>
-        <div className="tag-text">lamnorghiniiniaventador</div>
-        <div className="tag-post">17,075 posts</div>
-        <div className="tag-box"></div>
+        <div className="reply-text">lamnorghiniiniaventador</div>
+        <div className="reply-post">17,075 posts</div>
+        <div className="reply-box"></div>
         </div>
         </div>
         </section>
@@ -47,6 +50,7 @@ export default class Reply extends Component {
             <span className="Send">Send</span>
             </div>
             <img src={lower} alt="" />
+           
             {/* <button className="home" onClick={() => history.push("/MainScreen")}>
               <img src={home} alt="" />
             </button>

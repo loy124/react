@@ -21,7 +21,6 @@ export default class MainScreen extends Component {
       <div className="back">
         <div className="Rectangle">
           <img src={bitmap} className="Bitmap1" alt="logo" />
-
           <div className="story">
             <div className="top">
               <div className="Avatar">a</div>
@@ -105,7 +104,6 @@ export default class MainScreen extends Component {
               </article>
             </section>
           </div>
-
           <div className="story2">
             <div className="top">
               <div className="Avatar">a</div>

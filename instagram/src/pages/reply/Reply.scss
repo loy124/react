@@ -18,30 +18,34 @@
   .search-back{
       margin-top:64px;
       width:375px;
-      height: 603px;
+      height: 100%;
       background-color:#f6f6f6;
   } 
-  .tags {
+  .reply-tags {
     display: flex;
-    top:1px;
-    width: 359px;
-    height: 46px;
-    margin:11px 0 11px 16px;
+    width: 375px;
+    border-bottom: solid 1px #ebebeb;
+    padding:11px 16px 16px 16px;
   }
   .line{
     line-height: 46px;
   }
-  .tag-box{
-    margin-left:25px;
+  .Oval {
+  width: 38px;
+  height: 38px;
+  background-color: #e0e0e0;
+  border-radius: 100%
+}
+  .reply-box{
     width: 321px;
     border-bottom: solid 1px #ebebeb;
   }
-  .tag-img{
+  .reply-img{
         width: 13px;
         height: 17px;
         object-fit: contain;
   }
-  .tag-text{
+  .reply-text{
         font-family: AppleSDGothicNeo;
         font-size: 14px;
         font-weight: 500;
@@ -51,11 +55,12 @@
         letter-spacing: normal;
         text-align: left;
         color: #000000;
-        margin-left:25px;
+        margin-left:16px;
+        margin-bottom:4px;
         display: flex;
         flex-direction: column;
   }
-  .tag-post{
+  .reply-post{
     font-family: AppleSDGothicNeo;
     font-size: 13px;
     font-weight: 500;
@@ -65,7 +70,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #aaaaaa;
-    margin-left:25px;
+    margin-left:16px;
     margin-bottom:14px;
   }
   
