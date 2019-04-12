@@ -39,10 +39,10 @@ export default class MainScreen extends Component {
                 <img className="image" src={winter} alt="" />
               </article>
               <article className="status">
-                <button className="like">
+                <button className="like" >
                   <img src={like} alt="" />
                 </button>
-                <button className="comments">
+                <button className="comments" onClick={() => history.push("/Reply")}>
                   <img src={comments} alt="" />
                 </button>
               </article>

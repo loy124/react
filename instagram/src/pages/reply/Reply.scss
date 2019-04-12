@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+  }
+  .body {
+    text-align: center;
+    background: #2c2c2c;
+    
+  }
+  .Rectangle {
+    margin: 0 auto;
+    height: 1160px;
+    width: 375px;
+    background-color: #ffffff;
+    display: flex;
+  }
+  
+  
+  .search-back{
+      margin-top:64px;
+      width:375px;
+      height: 603px;
+      background-color:#f6f6f6;
+  } 
+  .tags {
+    display: flex;
+    top:1px;
+    width: 359px;
+    height: 46px;
+    margin:11px 0 11px 16px;
+  }
+  .line{
+    line-height: 46px;
+  }
+  .tag-box{
+    margin-left:25px;
+    width: 321px;
+    border-bottom: solid 1px #ebebeb;
+  }
+  .tag-img{
+        width: 13px;
+        height: 17px;
+        object-fit: contain;
+  }
+  .tag-text{
+        font-family: AppleSDGothicNeo;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+        margin-left:25px;
+        display: flex;
+        flex-direction: column;
+  }
+  .tag-post{
+    font-family: AppleSDGothicNeo;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #aaaaaa;
+    margin-left:25px;
+    margin-bottom:14px;
+  }
+  
+  .lower-fixed {
+    width: 375px;
+    height: 268px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -1px 0 0 #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    left: center;
+    bottom: 0;
+    padding: 0;
+  }
+  .Bar-input {
+    display: flex;
+    align-items: center;
+    width: 375px;
+    height: 50px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: solid 1px #ececec;
+    background-color: #ffffff;
+    
+  }
+  // .flex{
+  //   display:flex;
+  //   position: fixed;
+  //   margin:30px;
+  // }
+
+  .Send {
+    font-family: AppleSDGothicNeo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: #4a90e2;
+  }
+  .Rectangle-input {
+    
+    width: 298px;
+    height: 36px;
+    border-radius: 19px;
+    border: solid 1px #e0e0e0;
+    background-color: #ffffff;  
+    margin:7px 16px 7px 16px;
+  }
+  button {
+    background-color: transparent;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+  }
+  .home {
+    margin-left: 28px;
+  }
+  .home,
+  .search,
+  .photo,
+  .activity {
+    margin-right: 55px;
+  }
+  .profile {
+    margin-right: 27px;
+  }
+  button > img {
+    width: 20px;
+    height: 20px;
+  }
+  
