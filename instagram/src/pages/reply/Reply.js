@@ -15,18 +15,18 @@ export default class Reply extends Component {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-        <navigator>
+        
           <div className="reply-nav-bar">
             <button className="reply-btn" onClick={() => history.push('/mainScreen')}>
               <img src={back} alt="" />
             </button>
             <div className="reply-nav-text">Reply</div>
           </div>
-        </navigator>
+     
         <section className="search-back">
           <article>
             <div className="reply-tags">
-              <div class="line">
+              <div className="line">
                 <div className="Oval" />
               </div>
               <div>
@@ -42,7 +42,7 @@ export default class Reply extends Component {
 
           <article>
             <div className="reply-tags">
-              <div class="line">
+              <div className="line">
                 <div className="Oval" />
               </div>
               <div>
@@ -58,7 +58,7 @@ export default class Reply extends Component {
 
           <article>
             <div className="re-reply-tags">
-              <div class="line">
+              <div className="line">
                 <div className="Oval" />
               </div>
               <div>
@@ -70,7 +70,7 @@ export default class Reply extends Component {
         </section>
 
         <footer className="lower-fixed">
-          <div class="Bar-input">
+          <div className="Bar-input">
             <input className="Rectangle-input" placeholder="text-here" />
             <span className="Send">Send</span>
           </div>

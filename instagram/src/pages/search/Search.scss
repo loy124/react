@@ -6,12 +6,13 @@
     background: #2c2c2c;
     
   }
-  .Rectangle {
+  .Rectangle-main{
     margin: 0 auto;
-    height: 1160px;
     width: 375px;
     background-color: #ffffff;
     display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
   }
   .Bar {
     display: flex;

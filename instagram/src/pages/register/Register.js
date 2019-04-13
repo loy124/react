@@ -7,7 +7,7 @@ export default class Register extends Component {
     const { history } = this.props;
     return (
 
-        <div className="Rectangle-main">
+        <div className="Rectangle-Introduction">
             <header className="App-header">
             <img src={bitmap} className="Bitmap" alt="logo" />
             <div className="margin">

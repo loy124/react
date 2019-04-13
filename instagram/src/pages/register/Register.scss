@@ -8,11 +8,13 @@
   body {
     background: #2c2c2c;
   }
-  .Rectangle {
+  .Rectangle-Introduction {
     margin: 0 auto;
     width: 375px;
     height: 667px;
     background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
   }
   .Bitmap {
     width: 94px;

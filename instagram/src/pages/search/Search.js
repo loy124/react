@@ -13,7 +13,7 @@ export default class Search extends Component {
   render() {
     const { history } = this.props;
     return (
-      <div className="back">
+    
         <div className="Rectangle-main">
         <div className='Bar'>
         <input className='Rectangle-121' placeholder='search new tag'/>
@@ -21,7 +21,7 @@ export default class Search extends Component {
         </div>
         <section className="search-back">
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -31,7 +31,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -41,7 +41,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -51,7 +51,7 @@ export default class Search extends Component {
         </div>
         </div>     
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -71,7 +71,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -81,7 +81,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -91,7 +91,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -101,7 +101,7 @@ export default class Search extends Component {
         </div>
         </div>
         <div className="tags">
-        <div class="line">
+        <div className="line">
         <img className="tag-img"src={invalid} alt="" />
         </div>
         <div>
@@ -131,7 +131,7 @@ export default class Search extends Component {
             </button>
           </footer>
         </div>
-      </div>
+      
     );
   }
 }
