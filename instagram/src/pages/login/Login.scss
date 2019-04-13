@@ -4,14 +4,17 @@
 .App {
   text-align: center;
 }
-.back {
+body {
   background: #2c2c2c;
 }
-.Rectangle {
+.Rectangle-Introduction {
   margin: 0 auto;
   width: 375px;
   height: 667px;
   background-color: #ffffff;
+  display: flex;
+  position: flex;
+  flex-wrap: wrap;
 }
 .Bitmap {
   width: 94px;
@@ -19,7 +22,6 @@
   object-fit: contain;
   margin: 136px 140px 236px 141px;
 }
-
 .Rect {
   width: 247px;
   height: 40px;
@@ -46,5 +48,8 @@ input::placeholder {
   color: #aaaaaa;
 }
 .margin {
-  margin: 0 64px 108px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }

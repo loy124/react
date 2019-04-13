@@ -6,8 +6,8 @@ export default class Home extends Component {
   render() {
     const { history } = this.props;
     return (
-      <div className="back">
-        <div className="Rectangle">
+      
+        <div className="Rectangle-Introduction">
           <header className="App-header">
             <img src={bitmap} className="Bitmap" alt="logo" />
             <div className="margin">
@@ -26,7 +26,7 @@ export default class Home extends Component {
             </div>
           </header>
         </div>
-      </div>
+    
     );
   }
 }

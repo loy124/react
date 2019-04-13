@@ -5,7 +5,7 @@
     text-align: center;
   
   }
-  .back{
+  body {
     background: #2c2c2c;
   }
   .Rectangle {
@@ -64,7 +64,9 @@
     color: #aaaaaa;
   }
 }
-  .margin {
-    margin: 0 64px 108px 64px;
-  }
-  
+.margin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

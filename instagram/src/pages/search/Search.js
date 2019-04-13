@@ -14,7 +14,7 @@ export default class Search extends Component {
     const { history } = this.props;
     return (
       <div className="back">
-        <div className="Rectangle">
+        <div className="Rectangle-main">
         <div className='Bar'>
         <input className='Rectangle-121' placeholder='search new tag'/>
         <span className="Cancel">Cancel</span>
