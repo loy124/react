@@ -147,9 +147,15 @@ article > img {
   left: center;
   bottom: 0;
   padding: 0;
+  display:flex;
+  text-align: center;
 }
-
-button {
+button{
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+.fixed > button {
   background-color: transparent;
   padding: 0;
   margin-top: 15px;

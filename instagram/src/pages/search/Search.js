@@ -120,13 +120,13 @@ export default class Search extends Component {
             <button className="search" onClick={() => history.push("/Search")} >
               <img src={search} alt="" />
             </button>
-            <button className="photo">
+            <button className="photo" onClick={() => history.push("/Upload")}>
               <img src={photo} alt="" />
             </button>
             <button className="activity">
               <img src={activity} alt="" />
             </button>
-            <button className="profile">
+            <button className="profile" onClick={() => history.push("/Profile")}>
               <img src={profile} alt="" />
             </button>
           </footer>

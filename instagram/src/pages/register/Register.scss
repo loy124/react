@@ -50,8 +50,11 @@
   }
   input{
     box-sizing: border-box;
-    padding: 13px 0 11px 16px;
+    
+  }
+  .margin > input{
     margin-bottom:16px;
+    padding: 13px 0 11px 16px;
   &::placeholder{
     width: 30px;
     height: 16px;

@@ -44,7 +44,6 @@
     font-stretch: normal;
     line-height: 1;
     letter-spacing: -0.3px;
-    text-align: center;
     color: #030303;
   }
   .search-back{
@@ -101,40 +100,46 @@
     margin-bottom:14px;
   }
   
-  .fixed {
-    width: 375px;
-    height: 50px;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 -1px 0 0 #e0e0e0;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: fixed;
-    left: center;
-    bottom: 0;
-    padding: 0;
-  }
-  
-  button {
-    background-color: transparent;
-    padding: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 0;
-  }
-  .home {
-    margin-left: 28px;
-  }
-  .home,
-  .search,
-  .photo,
-  .activity {
-    margin-right: 55px;
-  }
-  .profile {
-    margin-right: 27px;
-  }
-  button > img {
-    width: 20px;
-    height: 20px;
-  }
+.fixed {
+  width: 375px;
+  height: 50px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 -1px 0 0 #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  left: center;
+  bottom: 0;
+  padding: 0;
+  display:flex;
+  text-align: center;
+}
+button{
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+.fixed > button {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 0;
+}
+.home {
+  margin-left: 28px;
+}
+.home,
+.search,
+.photo,
+.activity {
+  margin-right: 55px;
+}
+.profile {
+  margin-right: 27px;
+}
+.fixed > button > img {
+  width: 20px;
+  height: 20px;
+}
   

@@ -117,6 +117,9 @@
 }
 
 .lower-fixed {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   width: 375px;
   height: 268px;
   -webkit-backdrop-filter: blur(8px);
@@ -129,8 +132,6 @@
   padding: 0;
 }
 .Bar-input {
-  display: flex;
-  align-items: center;
   width: 375px;
   height: 50px;
   -webkit-backdrop-filter: blur(10px);
@@ -156,12 +157,34 @@
   color: #4a90e2;
 }
 .Rectangle-input {
+
   width: 298px;
   height: 36px;
   border-radius: 19px;
   border: solid 1px #e0e0e0;
   background-color: #ffffff;
   margin: 7px 16px 7px 16px;
+}
+
+input{
+  box-sizing: border-box;
+}
+.Bar-input > input{
+  margin-bottom:16px;
+  padding: 13px 0 11px 16px;
+&::placeholder{
+  width: 30px;
+  height: 16px;
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: -0.3px;
+  text-align: left;
+  color: #aaaaaa;
+}
 }
 // button {
 //   background-color: transparent;

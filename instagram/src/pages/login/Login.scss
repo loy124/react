@@ -30,11 +30,14 @@ body {
   background-color: #ffffff;
 }
 
-input {
+input{
   box-sizing: border-box;
-  padding: 13px 0 11px 16px;
+  
 }
-input::placeholder {
+.margin > input{
+  margin-bottom:16px;
+  padding: 13px 0 11px 16px;
+&::placeholder{
   width: 30px;
   height: 16px;
   font-family: AppleSDGothicNeo;
@@ -46,6 +49,7 @@ input::placeholder {
   letter-spacing: -0.3px;
   text-align: left;
   color: #aaaaaa;
+}
 }
 .margin {
   display: flex;
