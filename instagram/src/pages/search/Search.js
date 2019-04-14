@@ -24,95 +24,95 @@ export default class Search extends Component {
         <section className="search-back">
         {/* 태그 */}
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghini</div>
               <div className="tag-post">380,384 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
 
           {/* 태그 반복 */}
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghiniiniaventador</div>
               <div className="tag-post">17,075 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghiniguracan</div>
               <div className="tag-post">10,070 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghinimurcielago</div>
               <div className="tag-post">2,241 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghinigallardo</div>
               <div className="tag-post">5,765 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghininiveneno</div>
               <div className="tag-post">1,239 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghinijakarta</div>
               <div className="tag-post">1,050 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghini1</div>
               <div className="tag-post">380,384 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
           <div className="tags">
-            <div className="line">
+            <div>
               <img className="tag-img" src={invalid} alt="" />
             </div>
             <div>
               <div className="tag-text">lamnorghini</div>
               <div className="tag-post">380,384 posts</div>
-              <div className="tag-box" />
+              <div className="tag-line" />
             </div>
           </div>
         </section>

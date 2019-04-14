@@ -30,7 +30,7 @@ export default class Reply extends Component {
         {/* 댓글 */}
           <article>
             <div className="reply-tags">
-              <div className="line">
+              <div>
                 <div className="Oval" />
               </div>
               <div>
@@ -43,10 +43,10 @@ export default class Reply extends Component {
               </div>
             </div>
           </article>
-          {/* 댓글 */}
+          {/* 댓글 중복 */}
           <article>
             <div className="reply-tags">
-              <div className="line">
+              <div>
                 <div className="Oval" />
               </div>
               <div>
@@ -62,7 +62,7 @@ export default class Reply extends Component {
           {/* 댓글의 댓글 대댓글 */}
           <article>
             <div className="re-reply-tags">
-              <div className="line">
+              <div>
                 <div className="Oval" />
               </div>
               <div>

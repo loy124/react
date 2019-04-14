@@ -43,6 +43,7 @@ export default class MainScreen extends Component {
             <article>
               <img className="image" src={winter} alt="" />
             </article>
+            </section>
             {/* LIKE & COMMENTS */}
             <article className="status">
               <button className="like">
@@ -56,8 +57,7 @@ export default class MainScreen extends Component {
               </button>
             </article>
             {/* 본문및 내용, 태그 */}
-            <article>
-              <div className="text-form">
+              <article className="content-form">
                 <div className="content-name">sarahannloreth</div>
                 <div className="content">
                   the edge of New Zealand! we're so excited! i will remember
@@ -67,9 +67,8 @@ export default class MainScreen extends Component {
                   #newzealand #sight #trip #family #freinds #yolo
                 </div>
                 <div className="content-comments">View all comments</div>
-              </div>
             </article>
-          </section>
+          
         </div>
         {/* 반복 */}
         <div className="story">
@@ -87,6 +86,7 @@ export default class MainScreen extends Component {
             <article>
               <img className="image" src={blue} alt="" />
             </article>
+            </section>
             <article className="status">
               <button className="like">
                 <img src={like} alt="" />
@@ -99,7 +99,7 @@ export default class MainScreen extends Component {
               </button>
             </article>
             <article>
-              <div className="text-form">
+              <div className="content-form">
                 <div className="content-name">sarahannloreth</div>
                 <div className="content">
                   the edge of New Zealand! we're so excited! i will remember
@@ -111,7 +111,6 @@ export default class MainScreen extends Component {
                 <div className="content-comments">View all comments</div>
               </div>
             </article>
-          </section>
         </div>
 
         <div className="story">
@@ -130,6 +129,7 @@ export default class MainScreen extends Component {
             <article>
               <img className="image" src={mountain} alt="" />
             </article>
+          </section>
             <article className="status">
               <button className="like">
                 <img src={like} alt="" />
@@ -142,7 +142,7 @@ export default class MainScreen extends Component {
               </button>
             </article>
             <article>
-              <div className="text-form">
+              <div className="content-form">
                 <div className="content-name">sarahannloreth</div>
                 <div className="content">
                   the edge of New Zealand! we're so excited! i will remember
@@ -154,7 +154,6 @@ export default class MainScreen extends Component {
                 <div className="content-comments">View all comments</div>
               </div>
             </article>
-          </section>
         </div>
 
         {/* FOOTER */}

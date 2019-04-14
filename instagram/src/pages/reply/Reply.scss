@@ -28,7 +28,7 @@
   background-color: #ffffff;
 }
 .reply-nav-text {
-  margin-right: auto;
+  margin: 0 auto;
   font-family: AppleSDGothicNeo;
   font-size: 16px;
   font-weight: 500;
@@ -41,7 +41,6 @@
 }
 .reply-nav-bar > button {
   display: flex;
-  margin-right: auto;
   padding-left: 15px;
 }
 .reply-nav-bar > button > img {
@@ -64,23 +63,20 @@
   border-bottom: solid 1px #ebebeb;
   padding: 11px 16px 16px 16px;
 }
-.line {
-  line-height: 46px;
-}
 .Oval {
   width: 38px;
   height: 38px;
   background-color: #e0e0e0;
   border-radius: 100%;
 }
+.Oval > img{
+  width:100%;
+  height: 100%;
+  border-radius: 100%;
+}
 .reply-box {
   width: 321px;
   border-bottom: solid 1px #ebebeb;
-}
-.reply-img {
-  width: 13px;
-  height: 17px;
-  object-fit: contain;
 }
 .reply-text {
   font-family: AppleSDGothicNeo;

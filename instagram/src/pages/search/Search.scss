@@ -80,16 +80,13 @@
 
   .tags {
     display: flex;
-    top:1px;
+    align-items: center;
     width: 359px;
     height: 46px;
     margin:11px 0 11px 16px;
   }
-  .line{
-    line-height: 46px;
-  }
-  .tag-box{
-    margin-left:25px;
+
+  .tag-line{
     width: 321px;
     border-bottom: solid 1px #ebebeb;
   }
