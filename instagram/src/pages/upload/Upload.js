@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import home from "../../img/home.png";
 import search from "../../img/search.png";
 import photo from "../../img/photo.png";
+import photoClick from "../../img/photoClick.png";
 import profile from "../../img/profile.png";
 import activity from "../../img/activity.png";
 import invalid from "../../img/invalid-name.png";
@@ -21,7 +22,7 @@ export default class Upload extends Component {
 
           <button
             className="upload-btn"
-            onClick={() => history.push("/mainScreen")}
+            onClick={() => history.push("/mainScreen")} 
           >
             Done
           </button>
@@ -60,7 +61,7 @@ export default class Upload extends Component {
         </section>
 
         {/* FOOTER */}
-        
+
         <footer className="fixed">
           <button className="home" onClick={() => history.push("/MainScreen")}>
             <img src={home} alt="" />
@@ -69,7 +70,7 @@ export default class Upload extends Component {
             <img src={search} alt="" />
           </button>
           <button className="photo" onClick={() => history.push("/Upload")}>
-            <img src={photo} alt="" />
+            <img src={photoClick} alt="" />
           </button>
           <button className="activity">
             <img src={activity} alt="" />

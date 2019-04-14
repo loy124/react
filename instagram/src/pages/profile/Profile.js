@@ -4,6 +4,7 @@ import home from "../../img/home.png";
 import search from "../../img/search.png";
 import photo from "../../img/photo.png";
 import profile from "../../img/profile.png";
+import profileClick from "../../img/profileClick.png";
 import activity from "../../img/activity.png";
 import invalid from "../../img/invalid-name.png";
 import nikeshoes from "../../img/nike.PNG";
@@ -58,7 +59,7 @@ export default class Profile extends Component {
             <img src={activity} alt="" />
           </button>
           <button className="profile" onClick={() => history.push("/Profile")}>
-            <img src={profile} alt="" />
+            <img src={profileClick} alt="" />
           </button>
         </footer>
       </div>

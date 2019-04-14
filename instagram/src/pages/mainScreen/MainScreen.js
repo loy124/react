@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import bitmap from "../../img/bitmap.png";
 import home from "../../img/home.png";
+import homeClick from "../../img/homeClick.png";
 import search from "../../img/search.png";
 import photo from "../../img/photo.png";
 import like from "../../img/like.png";
@@ -159,7 +160,7 @@ export default class MainScreen extends Component {
         {/* FOOTER */}
         <footer className="fixed">
           <button className="home" onClick={() => history.push("/MainScreen")}>
-            <img src={home} alt="" />
+            <img src={homeClick} alt="" />
           </button>
           <button className="search" onClick={() => history.push("/Search")}>
             <img src={search} alt="" />

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import home from "../../img/home.png";
 import search from "../../img/search.png";
+import searchClick from "../../img/searchClick.png";
 import photo from "../../img/photo.png";
 import profile from "../../img/profile.png";
 import activity from "../../img/activity.png";
@@ -121,7 +122,7 @@ export default class Search extends Component {
             <img src={home} alt="" />
           </button>
           <button className="search" onClick={() => history.push("/Search")}>
-            <img src={search} alt="" />
+            <img src={searchClick} alt="" />
           </button>
           <button className="photo" onClick={() => history.push("/Upload")}>
             <img src={photo} alt="" />
