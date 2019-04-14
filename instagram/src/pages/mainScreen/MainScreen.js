@@ -19,18 +19,20 @@ export default class MainScreen extends Component {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-      {/* NAV */}
+        {/* NAV */}
         <div className="main-nav">
           <img src={bitmap} className="Bitmap1" alt="logo" />
         </div>
-      {/* STORY */}
+        {/* STORY */}
         <div className="story">
-        {/* NAME & LOCATION */}
+          {/* NAME & LOCATION */}
           <div className="top">
-            <div className="Avatar">a</div>
+            <div className="Avatar">
+              <img src={winter} alt="" />
+            </div>
             <span className="location">
-              <div className="sarahannloreth">sarahannloreth</div>
-              <div className="Kauai-Hawaii">
+              <div className="story-nickname">sarahannloreth</div>
+              <div className="story-location">
                 <img src={fill} alt="" /> Kauai-Hawaii
               </div>
             </span>
@@ -71,10 +73,10 @@ export default class MainScreen extends Component {
         {/* 반복 */}
         <div className="story">
           <div className="top">
-            <div className="Avatar">a</div>
+            <div className="Avatar"><img src={blue} alt="" /></div>
             <span className="location">
-              <div className="sarahannloreth">sarahannloreth</div>
-              <div className="Kauai-Hawaii">
+              <div className="story-nickname">sarahannloreth</div>
+              <div className="story-location">
                 <img src={fill} alt="" /> Kauai-Hawaii
               </div>
             </span>
@@ -113,10 +115,12 @@ export default class MainScreen extends Component {
 
         <div className="story">
           <div className="top">
-            <div className="Avatar">a</div>
+            <div className="Avatar">
+            <img className="image" src={mountain} alt="" />
+            </div>
             <span className="location">
-              <div className="sarahannloreth">sarahannloreth</div>
-              <div className="Kauai-Hawaii">
+              <div className="story-nickname">sarahannloreth</div>
+              <div className="story-location">
                 <img src={fill} alt="" /> Kauai-Hawaii
               </div>
             </span>
