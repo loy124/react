@@ -15,7 +15,8 @@ export default class Upload extends Component {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-        <div className="upload-nav-bar">
+      {/* NAV */}
+        <div className="upload-nav">
           <div className="upload-nav-text">Upload</div>
 
           <button
@@ -25,24 +26,41 @@ export default class Upload extends Component {
             Done
           </button>
         </div>
-        <section className="search-back" >
-        <div className="add-image">+ add image</div>
         
-        <div className="image-content">
-        <div className= "push-image">
-        <div className="added-image">
-        <img src={nikeshoes} alt=""/>
-        </div>
-        <img className="xmark"src={xmark} alt=""/>
-        </div>
-        
-        </div>
-        <div className="upload-inputs">
-        <input className="upload-input upload-input-descreption"type="text" placeholder="descreption"/>
-        <input className="upload-input upload-input-tag"type="text" placeholder="tag"/>
-        </div>
+        {/* 본문 */}
+        <section className="search-back">
+
+        {/* 이미지 추가 */}
+          <div className="add-image">+ add image</div>
+
+          <div className="image-content">
+            <div className="push-image">
+              <div className="added-image">
+                <img src={nikeshoes} alt="" />
+              </div>
+              <img className="xmark" src={xmark} alt="" />
+            </div>
+          </div>
+
+          {/* 글 본문및 태그 */}
+          <div className="upload-inputs">
+            <input
+              className="upload-input upload-input-descreption"
+              type="text"
+              placeholder="descreption"
+            />
+
+            
+            <input
+              className="upload-input upload-input-tag"
+              type="text"
+              placeholder="tag"
+            />
+          </div>
         </section>
 
+        {/* FOOTER */}
+        
         <footer className="fixed">
           <button className="home" onClick={() => history.push("/MainScreen")}>
             <img src={home} alt="" />

@@ -14,7 +14,9 @@
     flex-wrap: wrap;
     overflow: auto;
   }
-  .Bar {
+  
+  //NAV
+  .search-nav {
     display: flex;
     position: fixed;
     top:0;
@@ -25,13 +27,33 @@
     border: solid 1px #ececec;
     background-color: #ffffff;
   }
-  .Rectangle-121 {
+  .search-input {
     width: 292px;
     height: 26px;
     border: solid 0.1px #aaaaaa;
     border-radius: 100px;
     background-color: #eaeaea;
     margin:26px 0 0 8px;
+  }
+  input {
+    box-sizing: border-box;
+  }
+  .search-nav > input {
+    margin-bottom: 16px;
+    padding: 13px 0 11px 16px;
+    &::placeholder {
+      width: 30px;
+      height: 16px;
+      font-family: AppleSDGothicNeo;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      letter-spacing: -0.3px;
+      text-align: left;
+      color: #aaaaaa;
+    }
   }
   .Cancel {
     margin:32px 16px 16px 16px;
@@ -46,12 +68,16 @@
     letter-spacing: -0.3px;
     color: #030303;
   }
+  //본문
   .search-back{
       margin-top:64px;
       height: 900px;
       width:375px;
       background-color:#f6f6f6;
   } 
+
+  //태그 
+
   .tags {
     display: flex;
     top:1px;
@@ -100,6 +126,7 @@
     margin-bottom:14px;
   }
   
+  //FOOTER
 .fixed {
   width: 375px;
   height: 50px;

@@ -13,7 +13,7 @@ body {
   flex-wrap: wrap;
   overflow: auto;
 }
-.main-bar{
+.main-nav{
   width: 375px;
   height: 70px;
   display:flex;
@@ -25,6 +25,7 @@ body {
   height: 27px;
   object-fit: contain;
 }
+//STORY
 .story {
   width: 375px;
   height: 457px;
@@ -35,27 +36,7 @@ body {
   flex-wrap: wrap;
 margin-bottom:16px;
 }
-.story1 {
-  width: 375px;
-  height: 457px;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.03);
-  background-color: #ffffff;
-  position: absolute;
-  top: 543px;
-  
-}
-.story2 {
-  width: 375px;
-  height: 457px;
-  border-radius: 5px;
-  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.03);
-  background-color: #ffffff;
-  position: absolute;
-  top: 1016px;
-  
-}
-
+//NAME & LOCATION
 .top {
   display: flex;
 }
@@ -91,11 +72,14 @@ margin-bottom:16px;
   color: #aaaaaa;
 }
 
+//IMAGE
 article > img {
   margin: 0 7px;
   width: 361px;
   height: 240px;
 }
+
+//LIKE & COMMENTS 
 .like,
 .comments {
   width: 16px;
@@ -108,6 +92,8 @@ article > img {
   margin-left: 23px;
   margin-right: 16px;
 }
+
+// 본문 내용및 태그
 .text-form {
   margin-left: 23px;
   font-family: AppleSDGothicNeo;
@@ -135,6 +121,8 @@ article > img {
 .content-comments{
   color:#aaaaaa;
 }
+
+//FOOTER
 
 .fixed {
   width: 375px;

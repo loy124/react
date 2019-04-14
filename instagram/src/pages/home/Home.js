@@ -6,27 +6,23 @@ export default class Home extends Component {
   render() {
     const { history } = this.props;
     return (
-      
-        <div className="Rectangle-Introduction">
-          <header className="App-header">
-            <img src={bitmap} className="Bitmap" alt="logo" />
-            <div className="margin">
-              <button
-                className="Rect Rectangle-1"
-                onClick={() => history.push("/login")}
-              >
-                Login
-              </button>
-              <button
-                className="Rect Rectangle-2"
-                onClick={() => history.push("/register")}
-              >
-                Register
-              </button>
-            </div>
-          </header>
+      <div className="Rectangle-Introduction">
+        <img src={bitmap} className="Bitmap" alt="logo" />
+        <div className="Rect-box">
+          <button
+            className="Rect Rectangle-Login"
+            onClick={() => history.push("/login")}
+          >
+            Login
+          </button>
+          <button
+            className="Rect Rectangle-Register"
+            onClick={() => history.push("/register")}
+          >
+            Register
+          </button>
         </div>
-    
+      </div>
     );
   }
 }

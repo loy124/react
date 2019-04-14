@@ -23,9 +23,8 @@ class App extends Component {
         <Route exact path="/search" component={Search} />
         <Route exact path="/reply" component={Reply} />
         <Route exact path="/upload" component={Upload} />
-        <Route exact path="/profile" component={Profile} /> 
+        <Route exact path="/profile" component={Profile} />
         {/*<Route exact path="/activity" component={Activity} /> */}
-        
       </div>
     );
   }

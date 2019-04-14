@@ -16,11 +16,15 @@ export default class Profile extends Component {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-        <div className="profile-nav-bar">
-        <button className="profile-btn" onClick={() => history.push('/mainScreen')}>
-              <img src={back} alt="" />
-            </button>
-          <div className="profile-nav-text">Upload</div>
+        {/* NAV */}
+        <div className="profile-nav">
+          <button
+            className="profile-btn"
+            onClick={() => history.push("/mainScreen")}
+          >
+            <img src={back} alt="" />
+          </button>
+          <div className="profile-nav-text">Profile</div>
 
           <button
             className="profile-complete-btn"
@@ -29,13 +33,17 @@ export default class Profile extends Component {
             Done
           </button>
         </div>
-        <section className="search-back" >
-        <div className="profile-image">
-        </div>
+        {/* 본문 */}
+        <section className="search-back">
+          {/* 이미지 업로드 */}
+          <div className="profile-image">
+            <img src={nikeshoes} alt="" />
+          </div>
 
-        <div className= "upload-profile"> + Upload Profile</div>
+          <div className="upload-profile"> + Upload Profile</div>
         </section>
 
+        {/* FOOTER */}
         <footer className="fixed">
           <button className="home" onClick={() => history.push("/MainScreen")}>
             <img src={home} alt="" />

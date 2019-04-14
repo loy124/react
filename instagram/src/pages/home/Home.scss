@@ -8,6 +8,7 @@
 
   background: #2c2c2c;
 }
+// 인스타그램 내용이 담기는 박스
 .Rectangle-Introduction {
   margin: 0 auto;
   width: 375px;
@@ -16,12 +17,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+//로고
 .Bitmap {
   width: 94px;
   height: 27px;
   object-fit: contain;
-  margin: 30px 143px 610px 138px;
+  margin: 30px 143px 0 138px;
 }
+//input 설정
 .Rect {
   width: 247px;
   height: 40px;
@@ -30,14 +33,15 @@
   background-color: #ffffff;
   margin-bottom: 16px;
 }
-.Rectangle-2 {
+.Rectangle-Register {
   border: solid 1px #4a90e2;
   color: #4a90e2;
 }
-
-.margin {
+//버튼을 감싸는 div
+.Rect-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom:auto;
 }

@@ -5,7 +5,7 @@
   text-align: center;
   background: #2c2c2c;
 }
-.Rectangle-main{
+.Rectangle-main {
   margin: 0 auto;
   width: 375px;
   background-color: #ffffff;
@@ -13,13 +13,7 @@
   flex-wrap: wrap;
   overflow: auto;
 }
-.search-back {
-  margin-top: 64px;
-  width: 375px;
-  height: 900px;
-  background-color: #f6f6f6;
-}
-
+//NAV
 .reply-nav-bar {
   display: flex;
   justify-content: center;
@@ -56,6 +50,14 @@
   object-fit: contain;
 }
 
+//본문
+.search-back {
+  margin-top: 64px;
+  width: 375px;
+  height: 900px;
+  background-color: #f6f6f6;
+}
+//댓글
 .reply-tags {
   display: flex;
   width: 375px;
@@ -108,14 +110,14 @@
   margin-left: 16px;
   margin-bottom: 14px;
 }
-
+  //댓글의 댓글 대댓글 
 .re-reply-tags {
   display: flex;
   width: 375px;
   border-bottom: solid 1px #ebebeb;
   padding: 11px 16px 16px 70px;
 }
-
+   //텍스트 전송및 키보드 사진
 .lower-fixed {
   display: flex;
   align-items: center;
@@ -139,11 +141,6 @@
   border: solid 1px #ececec;
   background-color: #ffffff;
 }
-// .flex{
-//   display:flex;
-//   position: fixed;
-//   margin:30px;
-// }
 
 .Send {
   font-family: AppleSDGothicNeo;
@@ -157,7 +154,6 @@
   color: #4a90e2;
 }
 .Rectangle-input {
-
   width: 298px;
   height: 36px;
   border-radius: 19px;
@@ -166,46 +162,23 @@
   margin: 7px 16px 7px 16px;
 }
 
-input{
+input {
   box-sizing: border-box;
 }
-.Bar-input > input{
-  margin-bottom:16px;
+.Bar-input > input {
+  margin-bottom: 16px;
   padding: 13px 0 11px 16px;
-&::placeholder{
-  width: 30px;
-  height: 16px;
-  font-family: AppleSDGothicNeo;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.14;
-  letter-spacing: -0.3px;
-  text-align: left;
-  color: #aaaaaa;
+  &::placeholder {
+    width: 30px;
+    height: 16px;
+    font-family: AppleSDGothicNeo;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: -0.3px;
+    text-align: left;
+    color: #aaaaaa;
+  }
 }
-}
-// button {
-//   background-color: transparent;
-//   padding: 0;
-//   margin-top: 15px;
-//   margin-bottom: 15px;
-//   border: 0;
-// }
-// .home {
-//   margin-left: 28px;
-// }
-// .home,
-// .search,
-// .photo,
-// .activity {
-//   margin-right: 55px;
-// }
-// .profile {
-//   margin-right: 27px;
-// }
-// button > img {
-//   width: 20px;
-//   height: 20px;
-// }

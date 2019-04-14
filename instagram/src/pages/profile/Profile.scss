@@ -15,7 +15,8 @@
   overflow: auto;
 }
 
-.profile-nav-bar {
+// NAV
+.profile-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +26,6 @@
   top: 0;
   width: 375px;
   height: 64px;
-
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: solid 1px #ececec;
@@ -33,8 +33,8 @@
 }
 
 .profile-nav-text {
-  margin-left:auto;
-  margin-right:-36px;
+  margin-left: auto;
+  margin-right: -36px;
   font-family: AppleSDGothicNeo;
   font-size: 16px;
   font-weight: 500;
@@ -49,12 +49,12 @@
   // margin-right: auto;
   // padding-left: 15px;
 }
-.profile-btn{
-padding-left:15px;
+.profile-btn {
+  padding-left: 15px;
 }
 .profile-complete-btn {
-  margin-left:auto;
-  margin-right:18px;
+  margin-left: auto;
+  margin-right: 18px;
   width: 34px;
   height: 18px;
   font-family: AppleSDGothicNeo;
@@ -68,18 +68,21 @@ padding-left:15px;
   color: #4a90e2;
 }
 
-.profile-image{
-    // display:flex;
-    // justify-content: center;
-    margin:16px auto;
-    width: 38px;
-    height: 38px;
-    border: solid 1px #e0e0e0;
-    border-radius: 100%;
-    background-color: #ffffff;
-  
+//이미지 업로드
+.profile-image {
+  margin: 16px auto;
+  width: 38px;
+  height: 38px;
+  border: solid 1px #e0e0e0;
+  border-radius: 100%;
+  background-color: #ffffff;
 }
-.upload-profile{
+.profile-image > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%; 
+}
+.upload-profile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,9 +102,9 @@ padding-left:15px;
   text-align: center;
   color: #4a90e2;
 }
-.add-image{
+.add-image {
   margin: 16px auto;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 351px;
@@ -118,43 +121,43 @@ padding-left:15px;
   text-align: center;
   color: #ffffff;
 }
-.push-image{
-  display:flex;
+.push-image {
+  display: flex;
 }
-.image-content{
-  display:flex;
+.image-content {
+  display: flex;
 }
-.xmark{
+.xmark {
   position: relative;
   margin-left: 5px;
   width: 13px;
   height: 13px;
   object-fit: contain;
 }
-.added-image{
-  display:flex;
+.added-image {
+  display: flex;
   width: 60px;
   height: 60px;
   border: solid 1px #e0e0e0;
-  margin:0 0 16px 12px;
+  margin: 0 0 16px 12px;
 }
-.added-image > img{
-  width:60px;
+.added-image > img {
+  width: 60px;
   height: 60px;
 }
-.upload-input{
-  margin-bottom:16px;
-  padding:13px 0 131px 16px;
+.upload-input {
+  margin-bottom: 16px;
+  padding: 13px 0 131px 16px;
   width: 351px;
   height: 160px;
   border-radius: 6px;
   border: solid 1px #e0e0e0;
   background-color: #ffffff;
 }
-.upload-inputs > input::placeholder{
+.upload-inputs > input::placeholder {
   width: 30px;
   height: 16px;
-  font-family: AppleSDGothic  Neo;
+  font-family: AppleSDGothic Neo;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -164,12 +167,13 @@ padding-left:15px;
   text-align: left;
   color: #aaaaaa;
 }
-.upload-inputs{
+.upload-inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
+
+// FOOTER
 .fixed {
   width: 375px;
   height: 50px;

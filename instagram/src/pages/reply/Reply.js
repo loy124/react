@@ -15,15 +15,19 @@ export default class Reply extends Component {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-        
-          <div className="reply-nav-bar">
-            <button className="reply-btn" onClick={() => history.push('/mainScreen')}>
-              <img src={back} alt="" />
-            </button>
-            <div className="reply-nav-text">Reply</div>
-          </div>
-     
+      {/* NAV */}
+        <div className="reply-nav-bar">
+          <button
+            className="reply-btn"
+            onClick={() => history.push("/mainScreen")}
+          >
+            <img src={back} alt="" />
+          </button>
+          <div className="reply-nav-text">Reply</div>
+        </div>
+        {/* 본문 */}
         <section className="search-back">
+        {/* 댓글 */}
           <article>
             <div className="reply-tags">
               <div className="line">
@@ -39,7 +43,7 @@ export default class Reply extends Component {
               </div>
             </div>
           </article>
-
+          {/* 댓글 */}
           <article>
             <div className="reply-tags">
               <div className="line">
@@ -55,7 +59,7 @@ export default class Reply extends Component {
               </div>
             </div>
           </article>
-
+          {/* 댓글의 댓글 대댓글 */}
           <article>
             <div className="re-reply-tags">
               <div className="line">
@@ -69,6 +73,7 @@ export default class Reply extends Component {
           </article>
         </section>
 
+        {/* 텍스트 전송및 키보드 사진*/}
         <footer className="lower-fixed">
           <div className="Bar-input">
             <input className="Rectangle-input" placeholder="text-here" />

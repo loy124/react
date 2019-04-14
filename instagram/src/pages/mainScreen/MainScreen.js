@@ -19,10 +19,56 @@ export default class MainScreen extends Component {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-        <div className="main-bar">
+      {/* NAV */}
+        <div className="main-nav">
           <img src={bitmap} className="Bitmap1" alt="logo" />
         </div>
-
+      {/* STORY */}
+        <div className="story">
+        {/* NAME & LOCATION */}
+          <div className="top">
+            <div className="Avatar">a</div>
+            <span className="location">
+              <div className="sarahannloreth">sarahannloreth</div>
+              <div className="Kauai-Hawaii">
+                <img src={fill} alt="" /> Kauai-Hawaii
+              </div>
+            </span>
+          </div>
+          {/* IMAGE */}
+          <section className="img">
+            <article>
+              <img className="image" src={winter} alt="" />
+            </article>
+            {/* LIKE & COMMENTS */}
+            <article className="status">
+              <button className="like">
+                <img src={like} alt="" />
+              </button>
+              <button
+                className="comments"
+                onClick={() => history.push("/Reply")}
+              >
+                <img src={comments} alt="" />
+              </button>
+            </article>
+            {/* 본문및 내용, 태그 */}
+            <article>
+              <div className="text-form">
+                <div className="content-name">sarahannloreth</div>
+                <div className="content">
+                  the edge of New Zealand! we're so excited! i will remember
+                  this amazing view forever
+                </div>
+                <div className="content-tag">
+                  #newzealand #sight #trip #family #freinds #yolo
+                </div>
+                <div className="content-comments">View all comments</div>
+              </div>
+            </article>
+          </section>
+        </div>
+        {/* 반복 */}
         <div className="story">
           <div className="top">
             <div className="Avatar">a</div>
@@ -33,9 +79,10 @@ export default class MainScreen extends Component {
               </div>
             </span>
           </div>
+
           <section className="img">
             <article>
-              <img className="image" src={winter} alt="" />
+              <img className="image" src={blue} alt="" />
             </article>
             <article className="status">
               <button className="like">
@@ -74,10 +121,9 @@ export default class MainScreen extends Component {
               </div>
             </span>
           </div>
-
           <section className="img">
             <article>
-              <img className="image" src={winter} alt="" />
+              <img className="image" src={mountain} alt="" />
             </article>
             <article className="status">
               <button className="like">
@@ -106,47 +152,7 @@ export default class MainScreen extends Component {
           </section>
         </div>
 
-        <div className="story">
-          <div className="top">
-            <div className="Avatar">a</div>
-            <span className="location">
-              <div className="sarahannloreth">sarahannloreth</div>
-              <div className="Kauai-Hawaii">
-                <img src={fill} alt="" /> Kauai-Hawaii
-              </div>
-            </span>
-          </div>
-          <section className="img">
-            <article>
-              <img className="image" src={winter} alt="" />
-            </article>
-            <article className="status">
-              <button className="like">
-                <img src={like} alt="" />
-              </button>
-              <button
-                className="comments"
-                onClick={() => history.push("/Reply")}
-              >
-                <img src={comments} alt="" />
-              </button>
-            </article>
-            <article>
-              <div className="text-form">
-                <div className="content-name">sarahannloreth</div>
-                <div className="content">
-                  the edge of New Zealand! we're so excited! i will remember
-                  this amazing view forever
-                </div>
-                <div className="content-tag">
-                  #newzealand #sight #trip #family #freinds #yolo
-                </div>
-                <div className="content-comments">View all comments</div>
-              </div>
-            </article>
-          </section>
-        </div>
-
+        {/* FOOTER */}
         <footer className="fixed">
           <button className="home" onClick={() => history.push("/MainScreen")}>
             <img src={home} alt="" />
