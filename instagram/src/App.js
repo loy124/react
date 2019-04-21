@@ -13,11 +13,13 @@ import Upload from "./pages/upload/Upload";
 import Reply from "./pages/reply/Reply";
 import Profile from "./pages/profile/Profile";
 
+
 class App extends Component {
   componentDidUpdate() {
     window.scrollTo(0,0);
   }  
   render() {
+    
     return (
       <div>
         <Route exact path="/" component={Home} />

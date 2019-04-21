@@ -5,6 +5,7 @@ import "./Home.scss";
 export default class Home extends Component {
   render() {
     const { history } = this.props;
+    
     return (
       <div className="Rectangle-Introduction">
         <img src={bitmap} className="Bitmap" alt="logo" />

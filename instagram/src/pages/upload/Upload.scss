@@ -18,12 +18,10 @@
 .upload-nav {
   display: flex;
   align-items: center;
-  margin:0 auto;
   position: fixed;
   top: 0;
   width: 375px;
   height: 64px;
-
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: solid 1px #ececec;
