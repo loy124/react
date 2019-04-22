@@ -64,6 +64,7 @@ class App extends Component {
               </TableRow>
           </TableHead>
           <TableBody>
+        
         {this.state.customers ? this.state.customers.map(c => {
           return (
             <Customer
@@ -82,6 +83,7 @@ class App extends Component {
           <CircularProgress className={classes.progress} variant="determinate" value={this.state.completed}/>
           </TableCell>
         </TableRow>}
+
         </TableBody>
         </Table>
         </Paper>
