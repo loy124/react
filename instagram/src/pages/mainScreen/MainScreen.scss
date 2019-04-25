@@ -8,6 +8,7 @@ body {
 .Rectangle-main{
   margin: 0 auto;
   width: 375px;
+  height: 100%;
   background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
@@ -79,22 +80,17 @@ article > img {
   width: 361px;
   height: 240px;
 }
+// .image-bottom{
+//   width: 100%;
+//   // height: 300px;
+//   background-color:black;
+// }
 
-//LIKE & COMMENTS 
-.like,
-.comments {
-  width: 16px;
-  height: 14px;
-  object-fit: contain;
-  margin-top: 12px;
-  margin-bottom: 11px;
-}
-.like {
-  margin-left: 23px;
-  margin-right: 16px;
-}
+
+
 
 // 본문 내용및 태그
+//LIKE & COMMENTS 
 .content-form {
   margin-left: 23px;
   font-family: AppleSDGothicNeo;
@@ -106,6 +102,18 @@ article > img {
   letter-spacing: normal;
   text-align: left;
 }
+.like,
+.comments {
+  width: 16px;
+  height: 14px;
+  object-fit: contain;
+  // margin-top: 12px;
+  // margin-bottom: 11px;
+}
+.like {
+  margin-right: 16px;
+}
+
 .content-name {
   width: 329px;
   height: 22px;

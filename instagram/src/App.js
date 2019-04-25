@@ -12,14 +12,20 @@ import Upload from "./pages/upload/Upload";
 // import Activity from "./pages/activity/Activity";
 import Reply from "./pages/reply/Reply";
 import Profile from "./pages/profile/Profile";
+// import Footer from "./pages/footer/Footer";
 
+import RestAPI from "./common/RestAPI";
 
 class App extends Component {
+  componentDidMount() {
+    RestAPI();
+  }
+
   componentDidUpdate() {
-    window.scrollTo(0,0);
-  }  
+    window.scrollTo(0, 0);
+  }
+
   render() {
-    
     return (
       <div>
         <Route exact path="/" component={Home} />
@@ -30,6 +36,7 @@ class App extends Component {
         <Route exact path="/reply" component={Reply} />
         <Route exact path="/upload" component={Upload} />
         <Route exact path="/profile" component={Profile} />
+        {/* <Route exact path="/footer" component={Footer} /> */}
         {/*<Route exact path="/activity" component={Activity} /> */}
       </div>
     );

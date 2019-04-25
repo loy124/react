@@ -8,7 +8,7 @@
 .Rectangle-main {
   margin: 0 auto;
   width: 375px;
-  height: 800px;
+  height: 100%;
   background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
@@ -81,8 +81,11 @@
   line-height: 1.14;
   letter-spacing: -0.3px;
   text-align: center;
-  color: #ffffff;
 }
+.add-image > input {
+  display: none;
+}
+
 .push-image{
   display:flex;
 }
@@ -102,7 +105,9 @@
   height: 60px;
   border: solid 1px #e0e0e0;
   margin:0 0 16px 12px;
+  
 }
+
 .added-image > img{
   width:60px;
   height: 60px;

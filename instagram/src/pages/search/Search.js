@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import home from "../../img/home.png";
-import search from "../../img/search.png";
 import searchClick from "../../img/searchClick.png";
 import photo from "../../img/photo.png";
 import profile from "../../img/profile.png";
@@ -9,12 +8,63 @@ import activity from "../../img/activity.png";
 import invalid from "../../img/invalid-name.png";
 import "./Search.scss";
 
+import { getItem } from "../../common/StorageUtils";
+import Fetch from "../../common/Fetch";
+
+const renderEachTag = (data, key) => (
+  <div className="tags" key={key}>
+    <div>
+      <img className="tag-img" src={invalid} alt="" />
+    </div>
+    <div>
+      <div className="tag-text">{data.keyword}</div>
+      <div className="tag-post">{data.pid_tag}</div>
+      <div className="tag-line" />
+    </div>
+  </div>
+);
+
 export default class Search extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: []
+    };
+  }
+
+  componentDidMount() {
+    this.getData(0);
+  }
+
+  getData = async seq => {
+    const api = getItem("RestAPI");
+    const userData = getItem("userData");
+    const query = `?pid_user=${"pid_user"}`;
+    try {
+      const res = await Fetch(api.tag_get_tag_statis_user, query);
+      this.setState({
+        data: res
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  renderPost = () => {
+    // const { history } = this.props;
+    const { data } = this.state;
+    const dataMapping = data.map(item => {
+      return renderEachTag(item);
+    });
+
+    return dataMapping;
+  };
   render() {
     const { history } = this.props;
     return (
       <div className="Rectangle-main">
-      {/* NAV */}
+        {/* NAV */}
         <div className="search-nav">
           <input className="search-input" placeholder="search new tag" />
           <span className="Cancel">Cancel</span>
@@ -22,99 +72,8 @@ export default class Search extends Component {
 
         {/* 본문 */}
         <section className="search-back">
-        {/* 태그 */}
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghini</div>
-              <div className="tag-post">380,384 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-
-          {/* 태그 반복 */}
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghiniiniaventador</div>
-              <div className="tag-post">17,075 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghiniguracan</div>
-              <div className="tag-post">10,070 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghinimurcielago</div>
-              <div className="tag-post">2,241 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghinigallardo</div>
-              <div className="tag-post">5,765 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghininiveneno</div>
-              <div className="tag-post">1,239 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghinijakarta</div>
-              <div className="tag-post">1,050 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghini1</div>
-              <div className="tag-post">380,384 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
-          <div className="tags">
-            <div>
-              <img className="tag-img" src={invalid} alt="" />
-            </div>
-            <div>
-              <div className="tag-text">lamnorghini</div>
-              <div className="tag-post">380,384 posts</div>
-              <div className="tag-line" />
-            </div>
-          </div>
+          {/* 태그 */}
+          {this.renderPost()}
         </section>
         {/* FOOTER */}
         <footer className="fixed">

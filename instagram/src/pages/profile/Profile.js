@@ -1,18 +1,28 @@
 import React, { Component } from "react";
 
+import { getItem } from "../../common/StorageUtils";
+import Fetch from "../../common/Fetch";
+
 import home from "../../img/home.png";
 import search from "../../img/search.png";
 import photo from "../../img/photo.png";
-import profile from "../../img/profile.png";
 import profileClick from "../../img/profileClick.png";
 import activity from "../../img/activity.png";
-import invalid from "../../img/invalid-name.png";
-import nikeshoes from "../../img/nike.PNG";
-import xmark from "../../img/xmark.png";
 import back from "../../img/back.png";
 import "./Profile.scss";
 
 export default class Profile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { file: null };
+  }
+  handleFileChange = event => {
+    this.setState({
+      file: URL.createObjectURL(event.target.files[0])
+    });
+    console.log(1);
+  };
+
   render() {
     const { history } = this.props;
     return (
@@ -37,11 +47,16 @@ export default class Profile extends Component {
         {/* 본문 */}
         <section className="search-back">
           {/* 이미지 업로드 */}
+
           <div className="profile-image">
-            <img src={nikeshoes} alt="" />
+            <img src={this.state.file} alt="" />
           </div>
 
-          <div className="upload-profile"> + Upload Profile</div>
+          <label className="upload-profile">
+            {" "}
+            + Upload Profile{" "}
+            <input type="file" onChange={this.handleFileChange} />
+          </label>
         </section>
 
         {/* FOOTER */}
