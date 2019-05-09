@@ -1,36 +1,15 @@
 @import "utils";
+.pagination{
+  margin-top: 2rem;
 
-.header {
-  background: $oc-blue-6;
-  .header-content {
-    height: 5rem;
-    width: 1400px;
-    margin: 0 auto;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  //한가운데에 세로로 정렬
+  display: flex;
+  align-items: center;
 
-    //내부 세로 정렬
-    display: flex;
-    align-items: center;
-
-    //반응형
-    @include media("<wide") {
-      width: 100%;
-    }
-
-    @include media("<medium") {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+  .number {
+    fonst-size: 0.85rem;
+    text-align: center;
+    color: $oc-gray-6;
+    flex: 1; //남은 공간을 다 차지
   }
-}
-.brand {
-  //로고
-  color:white;
-  font-size:1.5rem;
-  font-weight: 600;
-}
-.right {
-  // 오른쪽 내용
-  margin-left:auto;
 }
