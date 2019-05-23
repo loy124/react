@@ -4,10 +4,10 @@
 
 ##Screens
 
-- [ ] Home
-- [ ] TV shows
-- [ ] Search
-- [ ] Detail
+- [x] Home
+- [x] TV shows
+- [x] Search
+- [x] Detail
 
 ##API Verbs
 
@@ -20,4 +20,10 @@
 - [x] Movie show Detail
 - [x] Search(TV, Movie
 
-cb772a50acc4cd6917b12854484b9d91
+##TODO
+
+- [] IMDB LINK
+- [] MOVIE/SHOW 안에 탭 추가 (유튜브 비디오, 제작 회사, 국가)
+- [] 콜렉션 링크
+- [] 콜렉션 라우터 만들기
+- [] TV SHOW 시즌, 크리에이터 

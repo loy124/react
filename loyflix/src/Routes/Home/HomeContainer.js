@@ -24,6 +24,7 @@ export default class extends React.Component {
       const {
         data: { results: popular }
       } = await moviesApi.popular();
+      
       this.setState({
         // nowPlaying: nowPlaying 아래와 같다
         nowPlaying,

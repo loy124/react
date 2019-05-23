@@ -2,6 +2,7 @@ import React from "react";
 import TVPresenter from "./TVPresenter";
 import { tvApi } from "api";
 
+
 export default class extends React.Component {
   state = {
     topRated: null,
@@ -21,7 +22,7 @@ export default class extends React.Component {
       const {
         data: { results: airingToday }
       } = await tvApi.airingToday();
-  
+      
       this.setState({
         topRated,
         popular,
