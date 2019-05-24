@@ -69,6 +69,21 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const Imdb = styled.a`
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: cover cover;
+  border-radius: 5px;
+  width: 50px;
+  height: 25px;
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
     <>
@@ -119,6 +134,18 @@ const DetailPresenter = ({ result, loading, error }) =>
                     : `${genre.name}/ `
                 )}
             </Item>
+            {result.imdb_id ? (
+              <>
+                <Divider>•</Divider>
+                <Imdb
+                  src={result.imdb_id ? require("../../assets/Imdb.png") : ""}
+                  href={`https://www.imdb.com/title/${result.imdb_id}`}
+                  target={"_blank"}
+                />
+              </>
+            ) : (
+              ""
+            )}
           </ItemContainer>
           <Overview>{result.overview}</Overview>
         </Data>
