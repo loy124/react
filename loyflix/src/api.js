@@ -8,6 +8,7 @@ const api = axios.create({
   }
 });
 
+
 export const moviesApi = {
   nowPlaying: () => api.get("movie/now_playing"),
   upcoming: () => api.get("movie/upcoming"),
@@ -18,12 +19,14 @@ export const moviesApi = {
         append_to_response: "videos"
       }
     }),
+
   search: term =>
     api.get("search/movie", {
       params: {
         query: encodeURIComponent(term) //인코딩해서 문자열로 검색
       }
-    })
+    }),
+  videos: id => api.get(`movie/${id}/videos`)
 };
 
 export const tvApi = {
@@ -41,5 +44,6 @@ export const tvApi = {
       params: {
         query: encodeURIComponent(term)
       }
-    })
+    }),
+  videos: id => api.get(`tv/${id}/videos`)
 };

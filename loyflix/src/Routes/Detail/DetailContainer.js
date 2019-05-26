@@ -12,7 +12,8 @@ export default class extends React.Component {
       result: null,
       error: null,
       loading: true,
-      isMovie: pathname.includes("/movie/")
+      isMovie: pathname.includes("/movie/"),
+      
     };
   }
 
@@ -39,6 +40,7 @@ export default class extends React.Component {
         ({ data: result } = await moviesApi.movieDetail(parsedId));
       } else {
         ({ data: result } = await tvApi.showDetail(parsedId));
+        
       }
     } catch {
       this.setState({ error: "Can't find anything" });
@@ -48,7 +50,6 @@ export default class extends React.Component {
   }
 
   render() {
-    
     const { result, error, loading } = this.state;
     console.log(result);
     return <DetailPresenter result={result} error={error} loading={loading} />;

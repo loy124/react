@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Loader from "../../Components/Loader";
 import Helmet from "react-helmet";
 import Message from "../../Components/Message";
+
 const Container = styled.div`
   height: calc(100vh - 50px);
   width: 100%;
@@ -44,7 +45,8 @@ const Cover = styled.div`
 
 const Data = styled.div`
   width: 70%;
-  margin-left: 10px;
+  margin-top:3px;
+  margin-left: 25px;
 `;
 
 const Title = styled.h3`
@@ -83,6 +85,20 @@ const Imdb = styled.a`
     opacity: 0.7;
   }
 `;
+
+const YoutubeContainer = styled.div`
+  width: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  margin-top: 25px;
+`;
+
+const Youtube = styled.iframe`
+ 
+  }
+`;
+
 
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
@@ -134,20 +150,36 @@ const DetailPresenter = ({ result, loading, error }) =>
                     : `${genre.name}/ `
                 )}
             </Item>
-            {result.imdb_id ? (
-              <>
-                <Divider>•</Divider>
-                <Imdb
-                  src={result.imdb_id ? require("../../assets/Imdb.png") : ""}
-                  href={`https://www.imdb.com/title/${result.imdb_id}`}
-                  target={"_blank"}
-                />
-              </>
-            ) : (
-              ""
-            )}
+            <Item>
+              {result.imdb_id ? (
+                <>
+                  <Divider>•</Divider>
+                  <Imdb
+                    src={result.imdb_id ? require("../../assets/Imdb.png") : ""}
+                    href={`https://www.imdb.com/title/${result.imdb_id}`}
+                    target={"_blank"}
+                  />
+                </>
+              ) : 
+                ""
+              }
+            </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+
+          <YoutubeContainer>
+          
+              <Youtube
+                key={result.videos.results[0].key}
+                width="560"
+                height="315"
+                src={`https://www.youtube.com/embed/${result.videos.results[0].key}`}
+                frameborder="0"
+                allow=" fullscreen "
+              />
+            {console.log(result.videos.results[0].key)}
+           
+          </YoutubeContainer>
         </Data>
       </Content>
     </Container>
