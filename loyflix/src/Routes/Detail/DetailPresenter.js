@@ -99,18 +99,19 @@ const Youtube = styled.iframe``;
 
 const ProductionCollection = styled.div`
   display: inline-block;
-  width: 120px;
+  /* width: 1px; */
   text-align: center;
-  margin-left:10px;
+  margin-left: 10px;
 `;
 
 const ProductionCollectionImg = styled.div`
-  width: 100%;
-  height: 50px;
+  width: 80px;
+  height: 100px;
   background-image: url(${props => props.CollectionImg});
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  border-radius: 5px;
 `;
 const ProductionCollectionText = styled.div`
   margin-top: 10px;
@@ -203,16 +204,6 @@ const DetailPresenter = ({ result, loading, error }) =>
                 ""
               )}
             </Item>
-            <Divider>•</Divider>
-
-            <Item>
-              {result.genres &&
-                result.genres.map((genre, index) =>
-                  index === result.genres.length - 1
-                    ? genre.name
-                    : `${genre.name}/ `
-                )}
-            </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
 
@@ -239,10 +230,11 @@ const DetailPresenter = ({ result, loading, error }) =>
               <CollectionContainer>
                 <CollectionLogo
                   CollectionImg={
-                    result.belongs_to_collection.poster_path &&
+                    result.belongs_to_collection.poster_path ?
                     `https://image.tmdb.org/t/p/w300${
                       result.belongs_to_collection.poster_path
                     }`
+                    :require("../../assets/noPosterImage.png")
                   }
                 />
                 <CollectionTitle>
@@ -251,6 +243,21 @@ const DetailPresenter = ({ result, loading, error }) =>
               </CollectionContainer>
             </Link>
           )}
+
+          {result.seasons && result.seasons.length > 0 ? (
+            result.seasons.map(season => (
+              <CollectionContainer>
+                <CollectionLogo
+                  CollectionImg={
+                    season.poster_path ? 
+                    `https://image.tmdb.org/t/p/w300${season.poster_path}`
+                    :require("../../assets/noPosterImage.png")
+                  }
+                />
+                <CollectionTitle>{season.name}</CollectionTitle>
+              </CollectionContainer>
+            ))
+          ) : ""}
 
           {result.production_companies && result.production_companies.length > 0
             ? result.production_companies.map(production => (

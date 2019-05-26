@@ -14,7 +14,8 @@ export default class App extends Component {
         "id": "0175d1f0-a8c6-41bf-8d02-df5734d829a4",
         "title": "해질녘 바다",
         "color": "#00c4e2",
-        "rating": 5
+        "rating": 5,
+        "timestamp": "Sat Mar 12 2018 16:12:09 GMT -0800 (PST)"
         },
         {
         "id": "83c7ba2f-7392-4d7d-9e23-35adbe186046",
@@ -27,11 +28,12 @@ export default class App extends Component {
         "title": "밝은 빨강",
         "color": "#ff0000",
         "rating": 0
-        }]
+        }],
+        sort: "SORTED_BY_DATE"
     };
   }
 
-  addColor = (title, color) => {
+  addColor = (title, color) => {  
     const colors = [
       ...this.state.colors,
       {

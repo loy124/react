@@ -25,7 +25,7 @@ class CollectionsContainer extends Component {
     try {
       ({ data: result } = await moviesApi.collections(parsedId));
     } catch {
-      error = "Can't find collections";
+      error = "콜렉션이 없습니다";
     } finally {
       this.setState({
         result,
