@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Loader from "../../Components/Loader";
 import Helmet from "react-helmet";
 import Message from "../../Components/Message";
+import Collection from "../../Components/Collection";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -45,8 +47,8 @@ const Cover = styled.div`
 
 const Data = styled.div`
   width: 70%;
-  margin-top:3px;
-  margin-left: 25px;
+  margin-top: 3px;
+  margin-left: 20px;
 `;
 
 const Title = styled.h3`
@@ -89,16 +91,53 @@ const Imdb = styled.a`
 const YoutubeContainer = styled.div`
   width: 100%;
   display: flex;
-  /* flex-direction: row; */
   flex-wrap: wrap;
-  margin-top: 25px;
+  margin-top: 15px;
 `;
 
-const Youtube = styled.iframe`
- 
+const Youtube = styled.iframe``;
+
+const ProductionCollection = styled.div`
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  margin-left:10px;
+`;
+
+const ProductionCollectionImg = styled.div`
+  width: 100%;
+  height: 50px;
+  background-image: url(${props => props.CollectionImg});
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+`;
+const ProductionCollectionText = styled.div`
+  margin-top: 10px;
+  color: white;
+  opacity: 0.7;
+`;
+
+const CollectionContainer = styled.div`
+  display: inline-block;
+  text-align: center;
+`;
+
+const CollectionLogo = styled.div`
+  margin-top: 5px;
+  width: 80px;
+  height: 100px;
+  background-image: url(${props => props.CollectionImg});
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.5;
   }
 `;
 
+const CollectionTitle = styled.div``;
 
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
@@ -160,26 +199,77 @@ const DetailPresenter = ({ result, loading, error }) =>
                     target={"_blank"}
                   />
                 </>
-              ) : 
+              ) : (
                 ""
-              }
+              )}
+            </Item>
+            <Divider>•</Divider>
+
+            <Item>
+              {result.genres &&
+                result.genres.map((genre, index) =>
+                  index === result.genres.length - 1
+                    ? genre.name
+                    : `${genre.name}/ `
+                )}
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
 
           <YoutubeContainer>
-          
+            {result.videos.results && result.videos.results.length > 0 ? (
               <Youtube
                 key={result.videos.results[0].key}
-                width="560"
-                height="315"
-                src={`https://www.youtube.com/embed/${result.videos.results[0].key}`}
+                width="525"
+                height="305"
+                src={`https://www.youtube.com/embed/${
+                  result.videos.results[0].key
+                }`}
                 frameborder="0"
                 allow=" fullscreen "
               />
-            {console.log(result.videos.results[0].key)}
-           
+            ) : (
+              ""
+            )}
+            {console.log(result.videos.results)}
           </YoutubeContainer>
+
+          {result.belongs_to_collection && (
+            <Link to={`/collections/${result.belongs_to_collection.id}`}>
+              <CollectionContainer>
+                <CollectionLogo
+                  CollectionImg={
+                    result.belongs_to_collection.poster_path &&
+                    `https://image.tmdb.org/t/p/w300${
+                      result.belongs_to_collection.poster_path
+                    }`
+                  }
+                />
+                <CollectionTitle>
+                  {result.belongs_to_collection.name}
+                </CollectionTitle>
+              </CollectionContainer>
+            </Link>
+          )}
+
+          {result.production_companies && result.production_companies.length > 0
+            ? result.production_companies.map(production => (
+                <ProductionCollection key={production.id}>
+                  <ProductionCollectionImg
+                    CollectionImg={
+                      production.logo_path
+                        ? `https://image.tmdb.org/t/p/w300/${
+                            production.logo_path
+                          }`
+                        : require("../../assets/noPosterImage.png")
+                    }
+                  />
+                  <ProductionCollectionText>
+                    {production.name}
+                  </ProductionCollectionText>
+                </ProductionCollection>
+              ))
+            : ""}
         </Data>
       </Content>
     </Container>

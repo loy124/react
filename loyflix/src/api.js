@@ -26,7 +26,8 @@ export const moviesApi = {
         query: encodeURIComponent(term) //인코딩해서 문자열로 검색
       }
     }),
-  videos: id => api.get(`movie/${id}/videos`)
+  videos: id => api.get(`movie/${id}/videos`),
+  collections: (id) => api.get(`collection/${id}`)
 };
 
 export const tvApi = {
@@ -47,3 +48,8 @@ export const tvApi = {
     }),
   videos: id => api.get(`tv/${id}/videos`)
 };
+
+export const CollectionApi = {
+  collectionDetail: id => api.get(`collection/${id}`)
+
+}
