@@ -24,6 +24,7 @@
 
 - [x] IMDB LINK
 - [x] MOVIE/SHOW 안에 탭 추가 (유튜브 비디오, 제작 회사, 국가)
-- [] 콜렉션 링크
-- [] 콜렉션 라우터 만들기
-- [] TV SHOW 시즌, 크리에이터 
+- [x] 콜렉션 링크
+- [x] 콜렉션 라우터 만들기
+- [x] TV SHOW 시즌, 크리에이터 
+![image](https://user-images.githubusercontent.com/35419326/58400949-79990800-8097-11e9-9bd7-ab0581a3c8a6.png)
