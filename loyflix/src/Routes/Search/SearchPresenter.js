@@ -28,6 +28,7 @@ const SearchPresenter = ({
   error,
   updateTerm
 }) => (
+
   <Container>
     <Form onSubmit={handleSubmit}>
       <Input
@@ -37,6 +38,7 @@ const SearchPresenter = ({
       />
     </Form>
     {loading ? (
+      
       <Loader />
     ) : (
       <>

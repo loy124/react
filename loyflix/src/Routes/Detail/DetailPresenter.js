@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Loader from "../../Components/Loader";
 import Helmet from "react-helmet";
 import Message from "../../Components/Message";
-import Collection from "../../Components/Collection";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -99,7 +98,6 @@ const Youtube = styled.iframe``;
 
 const ProductionCollection = styled.div`
   display: inline-block;
-  /* width: 1px; */
   text-align: center;
   margin-left: 10px;
 `;
@@ -125,12 +123,12 @@ const CollectionContainer = styled.div`
 `;
 
 const CollectionLogo = styled.div`
-  margin-top: 5px;
   width: 80px;
   height: 100px;
   background-image: url(${props => props.CollectionImg});
   background-position: center center;
   background-size: cover;
+  margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
   &:hover {
@@ -230,11 +228,11 @@ const DetailPresenter = ({ result, loading, error }) =>
               <CollectionContainer>
                 <CollectionLogo
                   CollectionImg={
-                    result.belongs_to_collection.poster_path ?
-                    `https://image.tmdb.org/t/p/w300${
-                      result.belongs_to_collection.poster_path
-                    }`
-                    :require("../../assets/noPosterImage.png")
+                    result.belongs_to_collection.poster_path
+                      ? `https://image.tmdb.org/t/p/w300${
+                          result.belongs_to_collection.poster_path
+                        }`
+                      : require("../../assets/noPosterImage.png")
                   }
                 />
                 <CollectionTitle>
@@ -244,20 +242,20 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Link>
           )}
 
-          {result.seasons && result.seasons.length > 0 ? (
-            result.seasons.map(season => (
-              <CollectionContainer>
-                <CollectionLogo
-                  CollectionImg={
-                    season.poster_path ? 
-                    `https://image.tmdb.org/t/p/w300${season.poster_path}`
-                    :require("../../assets/noPosterImage.png")
-                  }
-                />
-                <CollectionTitle>{season.name}</CollectionTitle>
-              </CollectionContainer>
-            ))
-          ) : ""}
+          {result.seasons && result.seasons.length > 0
+            ? result.seasons.map(season => (
+                <CollectionContainer>
+                  <CollectionLogo
+                    CollectionImg={
+                      season.poster_path
+                        ? `https://image.tmdb.org/t/p/w300${season.poster_path}`
+                        : require("../../assets/noPosterImage.png")
+                    }
+                  />
+                  <CollectionTitle>{season.name}</CollectionTitle>
+                </CollectionContainer>
+              ))
+            : ""}
 
           {result.production_companies && result.production_companies.length > 0
             ? result.production_companies.map(production => (

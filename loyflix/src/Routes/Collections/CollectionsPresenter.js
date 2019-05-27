@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Loader from "../../Components//Loader";
-import Section from "../../Components//Section";
+import Loader from "../../Components/Loader";
+import Section from "../../Components/Section";
 import Helmet from "react-helmet";
 import Message from "../../Components/Message";
 import Poster from "../../Components/Poster";
@@ -13,14 +13,14 @@ const Container = styled.div`
 const CollectionsPresenter = ({ collectionName, result, loading, error }) => (
   <Container>
     <Helmet>
-      <title>Search | loyflix</title>
+      <title>Search | Loyflix</title>
     </Helmet>
     {loading ? (
       <Loader />
     ) : (
       <>
         <Helmet>
-          <title>Collection | loyflix</title>
+          <title>Collection | Loyflix</title>
         </Helmet>
         {result && result.length > 0 && (
           <Section title={collectionName}>
@@ -31,7 +31,7 @@ const CollectionsPresenter = ({ collectionName, result, loading, error }) => (
                 imageUrl={movie.poster_path}
                 title={movie.title}
                 rating={movie.vote_average}
-                year={movie.release_date && movie.release_date.substring(0, 4)}
+                year={movie.release_date.substring(0, 4)}
                 isMovie={true}
               />
             ))}
